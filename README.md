@@ -15,12 +15,28 @@ linear_regression_model/
 │
 ├── summative/
 │   ├── linear_regression/
-│   │   └── multivariate.ipynb        # Main notebook: EDA, feature engineering, all models, predictions
-│   ├── API/                          # (Leave empty for now)
-│   └── FlutterApp/                   # (Leave empty for now)
+│   │   └── multivariate.ipynb        # EDA, feature engineering, all models, predictions
+│   ├── API/
+│   │   ├── prediction.py             # FastAPI server
+│   │   └── requirements.txt
+│   └── FlutterApp/                   # Flutter mobile app
+│       ├── lib/main.dart
+│       └── pubspec.yaml
 │
 └── README.md
 ```
+
+## Live API
+
+**Base URL:** `https://linear-regression-api.onrender.com`
+
+**Swagger UI (interactive docs):** [`https://linear-regression-api.onrender.com/docs`](https://linear-regression-api.onrender.com/docs)
+
+**Predict endpoint:** `POST /predict`
+
+## Video Demo
+
+[YouTube Demo](https://youtu.be/YOUR_VIDEO_ID_HERE) ← replace after uploading
 
 ## Models & Results
 
@@ -40,9 +56,28 @@ linear_regression_model/
 
 ## How to Run
 
+### Notebook
 ```bash
 git clone https://github.com/enockmugisha1/linear_regression_model.git
 cd linear_regression_model
 pip install pandas numpy matplotlib seaborn scikit-learn joblib
 jupyter notebook summative/linear_regression/multivariate.ipynb
 ```
+
+### API (locally)
+```bash
+cd summative/API
+python -m venv venv && source venv/bin/activate
+pip install -r requirements.txt
+uvicorn prediction:app --reload --port 8000
+# Visit http://localhost:8000/docs
+```
+
+### Flutter App
+```bash
+cd summative/FlutterApp
+# In lib/main.dart, set kApiBase to your deployed API URL or http://10.0.2.2:8000 for emulator
+flutter pub get
+flutter run
+```
+> Requires Flutter 3.x — install from https://flutter.dev/docs/get-started/install
