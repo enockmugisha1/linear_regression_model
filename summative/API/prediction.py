@@ -132,8 +132,9 @@ app.add_middleware(
         "http://10.0.2.2:8000",
         "https://linear-regression-model-747t.onrender.com",
     ],
+    allow_origin_regex=r"http://localhost:\d+",  # allow any localhost port (Flutter web dev)
     allow_credentials=True,
-    allow_methods=["GET", "POST"],
+    allow_methods=["GET", "POST", "OPTIONS"],
     allow_headers=["Content-Type", "Authorization", "Accept"],
 )
 
