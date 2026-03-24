@@ -28,11 +28,13 @@ linear_regression_model/
 
 ## Live API
 
-**Base URL:** `https://linear-regression-api.onrender.com`
+**Base URL:** `https://linear-regression-model-747t.onrender.com`
 
-**Swagger UI (interactive docs):** [`https://linear-regression-api.onrender.com/docs`](https://linear-regression-api.onrender.com/docs)
+**Swagger UI (interactive docs):** [`https://linear-regression-model-747t.onrender.com/docs`](https://linear-regression-model-747t.onrender.com/docs)
 
 **Predict endpoint:** `POST /predict`
+
+**Retrain endpoint:** `POST /retrain` (upload a new CSV to retrain all models)
 
 ## Video Demo
 

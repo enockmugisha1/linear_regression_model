@@ -30,7 +30,7 @@ class SalaryPredictorApp extends StatelessWidget {
 }
 
 // ─── Change this to your Render URL after deployment ─────────────────────────
-const String kApiBase = 'https://linear-regression-api.onrender.com';
+const String kApiBase = 'https://linear-regression-model-747t.onrender.com';
 // For local testing with Android emulator use: 'http://10.0.2.2:8000'
 
 class PredictionPage extends StatefulWidget {
