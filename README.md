@@ -38,7 +38,7 @@ linear_regression_model/
 
 ## Video Demo
 
-[YouTube Demo](https://youtu.be/YOUR_VIDEO_ID_HERE) ← replace after uploading
+[YouTube Demo](https://youtu.be/ds8fAGYv6xg)
 
 ## Models & Results
 
